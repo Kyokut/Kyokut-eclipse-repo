@@ -5,21 +5,21 @@
 <head>
 <style>
 .background1 {
-	background-image: url(/static/imgs/pic002.jpg);
+	background-image: url(/static/imgs/pic008.jpg);
 	background-color: #000000;
 }
 </style>
 <script>
 	function run(clickedObj) {
-		$("#firstline").fadeOut('fast');
+		$("#firstline").fadeOut('slow');
 		$('#intr')[0].pause();
 		$('#poem')[0].play();
-		$('#poem-txt').fadeIn('fast');
+		$('#poem-txt').fadeIn('slow');
 		$(clickedObj).animate({
 			width : '10px',
 			opacity : '0.2',
-			left : '1700px',
-			top : '80px'
+			left : '1800px',
+			top : '100px'
 		}, 30000);
 		//$('#waiting')[0].play();
 		$("#moviebox").show('slow');
@@ -59,16 +59,16 @@
 		src="/static/audio/introduction.mp3" autoplay="autoplay"></audio>
 	<audio id="poem" src="/static/audio/wanderingEarch-poem.mp3"
 		preload="auto"></audio>
-    <span id="firstline" style="font-size: 22px; color: white">大家好，我是学期学习“软件工程导论”学生 我准备设计和实现(修改)一个从老师github上拿下来的“<span
+    <span id="firstline" style="font-size: 22px; color: white">大家好，我与这学期学习“软件工程导论”的学生们准备设计和实现一个“<span
 		style="font-size: 38px; color: red">流浪地球</span>”的模拟工程！ 欢迎大家观赏,谢谢！点击屏幕左下角的地球，可以开始悲壮的流浪！！
 	</span>
-	<audio id="waiting" src="/static/audio/123.mp3" preload="auto" onended="onWaitingAudioEnd();"></audio>
+	<audio id="waiting" src="/static/audio/waiting.mp3" preload="auto" onended="onWaitingAudioEnd();"></audio>
 	<div id="poem-txt"
 		style="display: none; font-size: 22px; color: orange; position:absolute; left :10px;top:50px" >
 		《诗词版"流浪地球"》<br /> <span style="font-size: 18px; color: grey">
 			-郭鹏 </span><br /> <br /> 西风吹皱东方河，万年地球白发多。 <br /> 流浪星际家何去，满船清梦出银河。
 	</div>
-	<img src="/static/imgs/earth2.jpg"
+	<img src="/static/imgs/earth.png"
 		style="position: absolute; left: 10px; bottom: 10px; width: 200px"
 		onclick="run(this);return false" 
 		title="点击后，开始流浪 ！"
